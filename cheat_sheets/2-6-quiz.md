@@ -242,3 +242,17 @@ hello $place?hola $place?salve $place
 ```
 
 Kinda crazy right??
+
+**UPDATE**
+
+Turns out this is weird zsh behavior.
+If you do the *exact same thing* in bash, this is what happens
+
+```
+$ cd; rm -rf quiz; mkdir quiz; cd quiz
+$ var=echo echo echo
+echo
+$ touch "$var"
+touch: cannot touch '': No such file or directory
+$ ls
+```
